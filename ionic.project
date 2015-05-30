@@ -1,0 +1,8 @@
+{
+  "name": "IonicBrowserify",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "build",
+    "watch"
+  ]
+}
