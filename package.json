@@ -1,7 +1,7 @@
 {
   "name": "microscope-mobile-blank",
   "version": "1.0.0",
-  "description": "IonicBrowserify: An Ionic project",
+  "description": "A custom Ionic project",
   "dependencies": {
     "angular": "^1.4.0",
     "angular-animate": "^1.4.0",
