@@ -1,16 +1,26 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-// imports
+	// imports
 var angular = require('angular');
 require('angular-sanitize');
 require('ionic-framework');
 require('angular-ui-router');
 require('angular-animate');
+//require('ng-cordova');
+
+// Application routing and startup
+var Router  = require('./router');
 var startUp = require('./startUp');
 
+// Application modules
+require('./home/home');
+
+
 // application definition
-var app = angular.module('app', ['ionic']);
+var app = angular.module('app', ['ionic','app.home']);
+
+app.config(['$stateProvider','$urlRouterProvider', Router]);
 app.run(startUp);
-},{"./startUp":9,"angular":7,"angular-animate":3,"angular-sanitize":5,"angular-ui-router":6,"ionic-framework":8}],2:[function(require,module,exports){
+},{"./home/home":10,"./router":11,"./startUp":12,"angular":7,"angular-animate":3,"angular-sanitize":5,"angular-ui-router":6,"ionic-framework":8}],2:[function(require,module,exports){
 /**
  * @license AngularJS v1.4.0
  * (c) 2010-2015 Google, Inc. http://angularjs.org
@@ -81353,6 +81363,49 @@ IonicModule
 
 })();
 },{}],9:[function(require,module,exports){
+'use strict';
+
+// HomeCtrl class
+function HomeCtrl () {
+	this.title = 'home';
+
+	this.content = 'content';
+}
+
+module.exports = HomeCtrl;
+},{}],10:[function(require,module,exports){
+'use strict';
+
+// Imports
+var angular = require('angular');
+var HomeCtrl  = require('./controllers/homeCtrl');
+
+
+// Home sub-module definition
+var home = angular.module('app.home', []);
+home.controller('HomeCtrl', [HomeCtrl]);
+
+
+module.exports = home;
+},{"./controllers/homeCtrl":9,"angular":7}],11:[function(require,module,exports){
+'use strict';
+
+// Router class
+function Router($stateProvider,$urlRouterProvider) {
+
+	$stateProvider
+
+    .state('home', {
+      url: '/home',
+      templateUrl: '/home/templates/home.html',
+      //controller: '/home/controllers/homeCtrl'
+       });
+  // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise("/home");// Important!
+}
+
+module.exports = Router;
+},{}],12:[function(require,module,exports){
 function startUp($ionicPlatform) {
   $ionicPlatform.ready(function () {
     if (window.cordova && window.cordova.plugins.Keyboard) {
