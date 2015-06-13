@@ -1,3 +1,5 @@
+'use strict';
+
 // imports
 var angular = require('angular');
 require('angular-sanitize');
