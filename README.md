@@ -1,4 +1,4 @@
-# microscope-mobile-blank
+# ionic-blank
 ionic browserify / npm workflow blank template
 
 Requirements
