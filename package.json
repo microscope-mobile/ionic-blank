@@ -1,7 +1,7 @@
 {
-  "name": "microsocope-mobile-blank",
+  "name": "ionic-blank",
   "version": "1.0.0",
-  "description": "An Ionic project",
+  "description": "cordova ionic project",
   "dependencies": {
     "angular": "^1.4.0",
     "angular-animate": "^1.4.0",
