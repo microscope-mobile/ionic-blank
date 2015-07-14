@@ -40,3 +40,10 @@ gulp.task('assets', function(cb){
         .pipe(gulp.dest('./www/'));
     cb();
 });
+
+// copy templates
+gulp.task('templates', function(cb){
+    return gulp.src('./src/**/*.html')
+        .pipe(gulp.dest('./www/'));
+    cb();
+});
