@@ -3,7 +3,7 @@
 // imports
 var angular = require('angular');
 require('angular-sanitize');
-require('ionic-framework');
+require('ionic-npm/js/ionic.bundle.min');
 require('angular-ui-router');
 require('angular-animate');
 //require('ng-cordova');

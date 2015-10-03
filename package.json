@@ -7,10 +7,8 @@
     "angular-animate": "^1.4.0",
     "angular-sanitize": "^1.4.0",
     "angular-ui-router": "^0.2.15",
-    "install": "^0.1.8",
-    "ionic-framework": "^1.0.0-beta.13.2",
-    "ng-cordova": "^0.1.15-alpha",
-    "npm": "^2.11.0"
+    "ionic-npm": "*",
+    "ng-cordova": "^0.1.15-alpha"
   },
   "devDependencies": {
     "browserify": "^10.2.3",
