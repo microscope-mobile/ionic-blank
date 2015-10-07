@@ -30,7 +30,7 @@ gulp.task('browserify:release', function(cb){
 });
 
 gulp.task('fonts', function(cb){
- 	return gulp.src('node_modules/ionic-framework/release/fonts/**')
+ 	return gulp.src('node_modules/ionic-npm/fonts/**')
         .pipe(gulp.dest('./www/fonts/'));
     cb();
 });
