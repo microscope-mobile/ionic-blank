@@ -2,11 +2,16 @@
   "name": "ionic-blank",
   "version": "1.0.0",
   "description": "cordova ionic project",
+  "scripts": {
+    "start": "http-server ./www -s",
+    "test": "gulp test"
+  },
   "dependencies": {
     "angular": "^1.4.0",
     "angular-animate": "^1.4.0",
     "angular-sanitize": "^1.4.0",
     "angular-ui-router": "^0.2.15",
+    "http-server": "^0.8.5",
     "ionic-npm": "*",
     "ng-cordova": "^0.1.15-alpha"
   },
